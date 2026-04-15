@@ -7,7 +7,12 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "turbo format",
-    "typecheck": "turbo typecheck"
+    "typecheck": "turbo typecheck",
+    "dev:web": "turbo dev --filter=web",
+    "dev:api": "turbo dev --filter=api",
+    "build:web": "turbo build --filter=web",
+    "build:api": "turbo build --filter=api",
+    "start:api": "turbo start --filter=api"
   },
   "devDependencies": {
     "@workspace/eslint-config": "workspace:*",
