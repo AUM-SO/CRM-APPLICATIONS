@@ -35,8 +35,8 @@ export function NavUser({
   const { isMobile } = useSidebar()
   const router = useRouter()
 
-  function handleLogout() {
-    sessionStorage.removeItem("crm_token")
+  async function handleLogout() {
+    await fetch("/api/logout", { method: "POST" })
     router.push("/login")
   }
 

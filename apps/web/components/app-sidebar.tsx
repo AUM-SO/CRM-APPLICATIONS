@@ -60,10 +60,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <Link href="/customers">
                 <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-[#024F42]">
                   <Image
-                    src="https://storage.googleapis.com/exo24_public/EXO_logo_green.png"
+                    src="/assets/image/logo.png"
                     alt="EXO"
-                    width={20}
-                    height={20}
+                    width={28}
+                    height={28}
+                    unoptimized
                     className="object-contain brightness-0 invert"
                   />
                 </div>

@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import Image from "next/image"
 import { Eye, EyeOff, Loader2 } from "lucide-react"
 
 export default function LoginPage() {
@@ -28,8 +27,6 @@ export default function LoginPage() {
         setError(data.error ?? "Login failed. Please try again.")
         return
       }
-      // Store token from NestJS response
-      sessionStorage.setItem("crm_token", data.access_token)
       router.push("/customers")
     } catch {
       setError("Network error. Please try again.")
@@ -45,12 +42,12 @@ export default function LoginPage() {
         <div className="rounded-2xl bg-white p-8 shadow-lg md:p-10">
           {/* Logo */}
           <div className="mb-8 flex justify-center">
-            <Image
-              src="https://storage.googleapis.com/exo24_public/EXO_logo_green.png"
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/assets/image/logo.png"
               alt="EXO Logo"
               width={140}
               height={48}
-              priority
               className="object-contain"
             />
           </div>
